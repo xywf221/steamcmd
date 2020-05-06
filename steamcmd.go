@@ -2,6 +2,7 @@ package steamcmd
 
 import (
 	"bufio"
+	"errors"
 	"io"
 	"log"
 	"os"
