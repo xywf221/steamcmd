@@ -11,4 +11,5 @@ func main() {
 		panic(err)
 	}
 	fmt.Println(cmd.Run())
+	fmt.Println(cmd.RunScript("quit"))
 }

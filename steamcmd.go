@@ -4,7 +4,6 @@ import (
 	"bufio"
 	"errors"
 	"io"
-	"log"
 	"os"
 	"os/exec"
 	"strings"
@@ -52,7 +51,6 @@ func (s *SteamCmd) RunScript(script string) (result []byte, err error) {
 	if !s.Available && !s.Active {
 		err = errors.New("service not available")
 	}
-	log.Println("run script : " + script)
 	if _, err = s.pipe.WriteString(script + "\n"); err != nil {
 		return
 	}

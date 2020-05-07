@@ -6,7 +6,6 @@ import (
 	"fmt"
 	"github.com/silenceper/pool"
 	"io"
-	"log"
 	"os"
 	"path/filepath"
 	"strings"
@@ -53,7 +52,6 @@ func (w *WorkshopDownloader) Cache(appId, publishedFileId string) (string, error
 	if err != nil {
 		return "", err
 	}
-	log.Println("script result: " + result)
 	if strings.Contains(result, "ERROR!") || !strings.Contains(result, "Success") {
 		//下载失败
 		return "", errors.New(result)
